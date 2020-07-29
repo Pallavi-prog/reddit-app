@@ -2,23 +2,22 @@
 
 <h1>Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div class="card">
+     
+  
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div>
+      <%= post.body %>
+      
+        <span><%= link_to 'Show', post %></span>
+        <span><%= link_to 'Edit', edit_post_path(post) %></span>
+        <span><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      </div>
     <% end %>
-  </tbody>
-</table>
+    </div>
+  
+
 
 <br>
 
